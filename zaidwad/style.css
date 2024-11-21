@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+   
+   *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   
+   
+   body{
+      
+     text-align: center;
+    background-color: #000;
+    height: 100vh;
+   
+    font-family: 'Poppins', sans-serif;
+   }
+   h1{
+    color: aliceblue;
+   }
+   #bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    
+    
+   }
+   #myElement{
+      
+      text-align: center;
+      margin-top: 180px;
+      font-size: 70px;
+      
+   }
+   .nav{
+      
+     
+      display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40px;
+      z-index:999;
+      align-items: ;
+      animation: slides 500ms 250ms ease-in-out both;
+-webkit-animation: slides 500ms 250ms ease-in-out both;
+   }
+   @keyframes slides {
+      0% {
+        transform: translateY(50%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+   .animate{
+      font-size: 19px;
+      text-align: center;
+      color: aliceblue;
+   text-decoration: none;
+   cursor: pointer;
+   z-index: 10000;
+   margin-left: 20px;
+   margin-right: 20px;
+   opacity: 0.8;
+   
+   background-size:200%;
+      transition:0.5s ease-out;
+      
+   }
+   .animate:hover{
+      opacity: 1;
+     background-position: -100%;
+     background-image: #c21500;  /* fallback for old browsers */
+      background-image: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+      background-image: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+
+   }
+
+
+h3{
+   color: aliceblue;
+   margin: 60px;
+   font-size: 15px;
+   opacity: 0.7
+   ;
+}
+
+   
+   
+   .bc{
+      background-image: #c21500;  /* fallback for old browsers */
+      background-image: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+      background-image: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+   }

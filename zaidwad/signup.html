@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup-Hisaab</title>
+ 
+    <link rel="stylesheet" href="signup.css">
+    <script>
+        setTimeout(function () {
+            $('.nav').fadeToggle ();
+        },3500);
+     </script>
+</head>
+<style>
+  svg{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 35%;
+  display:inline-block;
+}
+   
+</style>
+<body>
+
+    <div id="bg" ></div>
+ 
+    <script type="text/javascript" src="/particles.min.js"></script>
+    
+    <script type="text/javascript" src="/custom.js"></script>
+   
+   <div class="nav">
+      <a class="animate" href="index.html">Home</a>
+      <a id="signin" class="animate" href="Login.html">Sign in</a>
+      <a id="signup" class="animate" href="signup.html">Sign up</a>
+      <a id='profile' class="animate" href="profile.html">Profile</a>
+      <a id="hisaab" class="animate" href="hisab.html">Hisaab</a>
+      <div id="signout" onclick="signout()" class="animate">Sign Out</div>
+      <a href="about_us.html" id="about_us" class="animate">About Us</a>
+
+
+   </div>
+   
+   <svg version="1.1" id="L6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+    <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50" height="50">
+   <animateTransform
+      attributeName="transform"
+      dur="0.5s"
+      from="0 50 50"
+      to="180 50 50"
+      type="rotate"
+      id="strokeBox"
+      attributeType="XML"
+      begin="rectBox.end"/>
+   </rect>
+    <rect x="27" y="27" fill="#fff" width="46" height="50">
+   <animate
+      attributeName="height"
+      dur="1.3s"
+      attributeType="XML"
+      from="50" 
+      to="0"
+      id="rectBox" 
+      fill="freeze"
+      begin="0s;strokeBox.end"/>
+   </rect>
+ </svg>
+   <div id="cont" class="container">
+    
+        <h2>Sign Up</h2><br>
+        <!-- <h3>New User? <a href="#">Create an account.</a></h3> -->
+       <!-- <form action="/action_page.php">   -->
+          <div class="form-group1">
+            <label class="emm1" for="name">Name:</label><br>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+          </div>
+          <div class="form-group2">
+            <label class="emm2" for="email">Email:</label><br>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group2">
+            <label for="pwd">Password:</label><br>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+          </div>
+          <!-- <div class="checkbox">
+           <span> <input type="checkbox" name="remember"> Remember me</span>
+          </div> -->
+          <button type="submit" onclick="SignUp()" class="btn">Sign in</button>
+        </form>
+      </div> 
+
+      <script>
+        document.getElementById('L6').style.display = 'none';
+        async function SignUp(){
+          event.preventDefault();
+          document.getElementById('L6').style.display = 'block';
+          document.getElementById('cont').style.display = 'none';
+
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const pwd = document.getElementById('pwd').value;
+          console.log(name, email, pwd);
+          // const formData = new FormData(form);
+          let result = await fetch('http://localhost:3000/api', {
+            method: 'POST',
+            body: JSON.stringify({name:name, email: email, password: pwd, url:'signup'}),
+            headers: {
+            'Content-Type': 'application/json',
+            }
+          })
+          let data = await result.json();
+          console.log(data);
+          const error = data.status.error;
+          console.log(error);
+          if(error){
+            window.location = '/signup.html';
+            alert("Some error occured!" + error);
+            return;
+          }
+          const already_signed_up = data.status.user_already_signed_up;
+          const new_signup = data.status.user_new_signup;
+          if(already_signed_up == "True"){
+            window.location = '/login.html';
+            alert("You have already signed up!");
+            return;
+          }else if(new_signup == "True"){
+            alert("Signup succesful! Please login to continue! Your spreadsheet has been shared with you gmail ID.")
+            window.location = '/login.html'
+          }
+
+        }
+      </script>
+<script type="text/javascript" src="nav.js">
+</script>
+</body>
+</html>

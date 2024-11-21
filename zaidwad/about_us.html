@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100vh;
+    color: white;
+	font-size: 5rem;
+	font-weight: bold;
+	
+}
+
+.wrapper {
+	height: 100%;
+	width: 5000px;
+	background: url('wave.svg') repeat-x;
+}
+
+section {
+
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	/* display:inline-block; */
+    height: 100%;
+	width: 100%;
+    margin-top:-2%
+}
+
+
+.section1{
+    margin-top:200px;
+}
+.section2,.section3,.section4{
+    margin-top:170px;
+}
+.section4{
+    margin-bottom:100px
+}
+h1{
+    font-size:40px;
+}
+p{
+    margin-top:10px;
+    line-height: 40px;
+    font-size:20px;
+}
+
+.left{
+    
+    position:relative;
+    width:20%;
+    height:auto;
+    float:left;
+    margin-left:-78%;
+    
+}
+
+.right{
+    position:relative;
+    width:20%;
+    height:auto;
+    float:right;
+    margin-left:-70%;
+}
+
+
+
+.img{
+    position:relative;
+    
+    margin-left:200px;
+    margin-top:-px;
+    width:400px;
+    height:auto;
+}
+    </style>
+</head>
+<body>
+    <div id="bg" ></div>
+
+    <script type="text/javascript" src="/particles.min.js"></script>
+        
+        <script type="text/javascript" src="/custom.js"></script>
+    <div class="nav">
+        <a class="animate" href="index.html">Home</a>
+        <a id="signin" class="animate" href="Login.html">Sign in</a>
+        <a id="signup" class="animate" href="signup.html">Sign up</a>
+  
+        <a id='profile' class="animate" href="profile.html">Profile</a>
+        <a id="hisaab" class="animate" href="hisab.html">Hisaab</a>
+        <div id="signout" onclick="signout()" class="animate">Sign Out</div>
+        <a href="about_us.html" id="about_us" class="animate">About Us</a>
+
+     </div>
+
+     <!-- Enter jo bhi add krna here! -->
+     <div class="wrapper">
+        
+        <section class="section1">
+            <div class="left rev">
+                <h1>Introduction</h1>
+                <p>
+                    Welcome to Hisaab! Our website is designed to help you keep track of your expenses in a simple and efficient way. Whether you are an individual or a business owner, Hisaab provides a user-friendly interface to record all your expenses and manage your finances.                </p>
+               
+            </div>
+            
+        </section>
+        <section class="section2">
+            <div class="right rev">
+                <h1>Our Mission</h1>
+                <p>
+                    At Hisaab, our mission is to make financial management easy and accessible for everyone. We believe that by providing a reliable expense recording tool, we can help individuals and businesses achieve their financial goals.                </p>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="left rev">
+                <h1>Our Team</h1>
+                <p>
+                    Our team is made up of skilled developers and designers who are passionate about creating intuitive software. We work together to continuously improve and enhance the features of our website. Our goal is to provide you with a seamless and enjoyable experience.            </div>
+            <!-- <img class="img rt rev" src="pie.gif" />  -->
+        </section>
+        <section class="section4">
+            <div class="right rev">
+                <h1>Contact Us</h1>
+                <p>
+                    We would love to hear from you! If you have any questions, suggestions or feedback, please do not hesitate to get in touch with us. You can reach us by email or through our social media channels. We are always happy to help and are committed to providing the best possible service to our users.                                    </p>
+            </div>
+        </section>
+    </div>
+
+     
+<script src="nav.js">
+    
+</script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script>
+    ScrollReveal().reveal('.rev' , {delay:500 , reset: true});
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hisabb.css">
+    
+</head>
+<style>
+    svg{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 35%;
+  display:inline-block;
+}
+</style>
+<body>
+
+    <div id="bg" ></div>
+ 
+    <script type="text/javascript" src="/particles.min.js"></script>
+    
+    <script type="text/javascript" src="/custom.js"></script>
+   
+    <div class="nav">
+        <a class="animate" href="index.html">Home</a>
+        <a id="signin" class="animate" href="Login.html">Sign in</a>
+        <a id="signup" class="animate" href="signup.html">Sign up</a>
+  
+        <a id='profile' class="animate" href="profile.html">Profile</a>
+        <a id="hisaab" class="animate" href="hisab.html">Hisaab</a>
+        <div id="signout" onclick="signout()" class="animate">Sign Out</div>
+        <a href="about_us.html" id="about_us" class="animate">About Us</a>
+
+     </div>
+
+
+     <svg version="1.1" id="L6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+      <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50" height="50">
+     <animateTransform
+        attributeName="transform"
+        dur="0.5s"
+        from="0 50 50"
+        to="180 50 50"
+        type="rotate"
+        id="strokeBox"
+        attributeType="XML"
+        begin="rectBox.end"/>
+     </rect>
+      <rect x="27" y="27" fill="#fff" width="46" height="50">
+     <animate
+        attributeName="height"
+        dur="1.3s"
+        attributeType="XML"
+        from="50" 
+        to="0"
+        id="rectBox" 
+        fill="freeze"
+        begin="0s;strokeBox.end"/>
+     </rect>
+   </svg>
+    <form id="cont" data-multi-step class="multi-step-form">
+       
+        <h1 class="expp">Add Expense</h1>
+        <div class="card active" data-step>
+            
+            <h1><b>Step 1</b></h1>
+            <div class="form-group">
+                <label for="date">Date of Expense:</label><br>
+                <input type="date" name="date" id="date">
+                
+            </div>
+            <div class="form-group">
+                <label for="Expense">Expense for:</label>
+                <br>
+  <select id="typee" name="typee">
+    <option value="Food">Food</option>
+    <option value="Padhai">Padhai</option>
+    <option value="Travel">Travel</option>
+    <option value="Others">Others</option>
+  </select>
+                
+            </div>
+            
+            <button type="button" id="next1" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
+            <h1><b>Step 2</b></h1>
+            <div class="form-group">
+                <label for="expense">Where did u spend?</label><br>
+                <input type="expense" placeholder="Enter Expense" name="expense" id="expense">
+                
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label><br>
+                <input type="amount" placeholder="Amount" name="amount" id="amount">
+                
+            </div>
+            <button type="button" class="b2" data-previous>Previous</button>
+            <button onclick="addtohisaab()" id="next2" type="button" class="b1" >Submit</button>
+            <!-- <button type="button" class="b1" data-next>Next</button> -->
+        </div>
+        <!-- <div class="card" data-step>
+            <h1><b>Step 3</b></h1>
+            <div class="form-group">
+                <label for="email">Email</label><br>
+                <input type="email" placeholder="Enter Email" name="email" id="email">
+                
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="Enter Password" name="password" id="password">
+                
+            </div>
+            <button type="button" class="b2" data-previous>Previous</button>
+            <button onclick="addtohisaab()" type="button" class="b1" >Submit</button>
+        </div> -->
+        </div>
+    </form>
+    <script src="hisab.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    height: 100vh;
+   display:block;
+
+}
+
+#bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  
+  
+ }
+
+ .nav{
+    
+   
+  display: flex;
+justify-content: center;
+align-self: center;
+margin-top: 40px;
+  z-index:999;
+  align-items: ;
+}
+.animate{
+  font-size: 19px;
+  text-align: center;
+  color: aliceblue;
+text-decoration: none;
+cursor: pointer;
+z-index: 10000;
+margin-left: 20px;
+margin-right: 20px;
+opacity: 0.8;
+
+background-size:200%;
+  transition:0.5s ease-out;
+  
+}
+.animate:hover{
+  opacity: 1;
+ background-position: -100%;
+ background-image: #c21500;  /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.card{
+  
+   color: aliceblue;
+   
+ 
+    /* margin-left: 100px; */
+   margin:auto;
+    height: auto;
+    display: none;
+
+
+    
+    background: rgba( 255, 255, 255, 0.25 );
+ box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+ backdrop-filter: blur( 4px );
+ -webkit-backdrop-filter: blur( 4px );
+ border-radius: 10px;
+ border: 1px solid rgba( 255, 255, 255, 0.18 );
+ max-width: 500px;
+ align-items: center;
+ 
+margin-top:-100px;
+
+ height: auto;
+ overflow:hidden
+
+
+
+
+    
+}
+.card.active {
+    display: block;
+    animation: slide 250ms 125ms ease-in-out both;
+  }
+ 
+.expp{
+    margin-top:10%;
+    
+}
+.form-group label{
+  position: relative;
+  float:left;
+  margin-left: 25px;
+ margin-top: 20px;;
+    
+}
+.form-group input{
+    position: inherit;
+    text-align: center;
+    width:90%;
+    height:30px;
+    margin-top: 10px;
+    
+
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    
+    height:40px;
+    border-collapse: collapse;
+    outline: none;
+    padding: 12px;
+    
+    opacity:0.3;
+  
+
+
+    
+}
+
+
+.form-group input:focus{
+  border: none;
+  transition:0.25s ease-in-out;
+  opacity:0.5;
+  ;
+}
+.card select{
+ 
+    cursor: pointer;
+
+
+    position: inherit;
+    text-align: center;
+    width:90%;
+    height:30px;
+    margin-top: 10px;
+    
+
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    
+    height:40px;
+    border-collapse: collapse;
+    outline: none;
+    padding: 12px;
+    
+    opacity:0.3;
+}
+@keyframes slide {
+    0% {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .form-group:last-child {
+    margin: 0;
+  }
+  button{
+    margin-bottom: 5%;
+    margin-top:5%;
+    
+    outline:none;
+    border:none;
+    width: 100px;
+    
+
+
+
+
+
+    
+    height:40px;
+    border:none;
+    outline:none;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 20px;
+    background-image: #c21500;  /* fallback for old browsers */
+    background-image: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to right, #ffc500, #c21500);
+    cursor: pointer;
+    color:aliceblue;
+    opacity:0.8;
+   
+    transition: 0.25s ease-out;
+    
+  }
+  button:hover{
+    opacity:1;
+ }
+ 
+ .card h1{
+  margin-left: -340px;
+  font-size: 40px;
+  margin-top: 10px;
+ }
+ .b1{
+  float: right;
+  margin-right: 25px;
+ }
+ .b2{
+  float:left;
+  margin-left:25px;
+ }
